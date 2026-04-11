@@ -1,0 +1,96 @@
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+
+CodeBrix.MarkupParse incorporates code from third-party open source projects.
+The original source code was modified, adapted, and/or repurposed for use in
+this project. The notices below are provided for information purposes and to
+comply with the licensing requirements of the original works.
+
+In the event that we accidentally failed to list a required notice, please
+bring it to our attention by posting an issue at:
+https://github.com/ellisnet/CodeBrix.MarkupParse
+
+================================================================================
+AngleSharp v7.1.0
+================================================================================
+
+Source: https://github.com/AngleSharp/AngleSharp
+License: MIT License
+
+All code originating from AngleSharp was included as allowed by the MIT License
+permissible open source software license - as of AngleSharp version 7.1.0.
+This project (CodeBrix.MarkupParse) complies with all provisions of the source
+code license of AngleSharp v7.1.0 (MIT License). No code has been copied,
+modified, adapted, or repurposed from any version of AngleSharp that has a
+license newer than the MIT License.
+
+Copyright (c) 2013 - 2025 AngleSharp
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+Third-party code and test data used by AngleSharp (and included in
+CodeBrix.MarkupParse)
+================================================================================
+
+The following notices are carried forward from AngleSharp, as the corresponding
+code or test data is present in CodeBrix.MarkupParse.
+
+-----
+W3C CSS Selectors Test Suite
+-----
+
+CSS selector tests in the CodeBrix.MarkupParse.Tests project were adapted from
+the W3C CSS3 Selectors Test Suite.
+Source: http://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/xml/full/flat/
+
+Copyright (c) W3C (MIT, ERCIM, Keio, Beihang)
+Licensed under the W3C Software and Document License.
+https://www.w3.org/copyright/software-license/
+
+-----
+W3C DOM Test Suite
+-----
+
+DOM manipulation tests in the CodeBrix.MarkupParse.Tests project were adapted
+from the W3C DOM test suite.
+Source: http://w3c-test.org/html/dom/documents/dom-tree-accessors/
+
+Copyright (c) W3C (MIT, ERCIM, Keio, Beihang)
+Licensed under the W3C Software and Document License.
+https://www.w3.org/copyright/software-license/
+
+-----
+Quirksmode DOM Tests
+-----
+
+Quirksmode tests in the CodeBrix.MarkupParse.Tests project were adapted from
+quirksmode.org DOM tests.
+Source: http://www.quirksmode.org/dom/tests/
+More information: http://www.quirksmode.org/dom/w3c_core.html
+
+-----
+StackOverflow - Network Connection Check
+-----
+
+A small network-availability helper in the CodeBrix.MarkupParse.Tests project
+was adapted from a StackOverflow answer.
+Source: http://stackoverflow.com/questions/520347/c-sharp-how-do-i-check-for-a-network-connection
+
+StackOverflow content is licensed under CC BY-SA.
+https://creativecommons.org/licenses/by-sa/4.0/

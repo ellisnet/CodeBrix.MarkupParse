@@ -1,0 +1,162 @@
+using CodeBrix.MarkupParse.Css.Parser;
+using CodeBrix.MarkupParse.Dom;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CodeBrix.MarkupParse.Css.Dom; //Was previously: namespace AngleSharp.Css.Dom
+
+/// <summary>
+/// Represents a complex selector, i.e. one or more compound selectors
+/// separated by combinators.
+/// </summary>
+sealed class ComplexSelector : ISelector
+{
+    #region Fields
+
+    private readonly List<CombinatorSelector> _combinators;
+
+    #endregion
+
+    #region ctor
+
+    public ComplexSelector()
+    {
+        _combinators = [];
+    }
+
+    #endregion
+
+    #region Properties
+
+    public Priority Specificity
+    {
+        get
+        {
+            var sum = new Priority();
+            var n = _combinators.Count;
+
+            for (var i = 0; i < n; i++)
+            {
+                sum += _combinators[i].Selector.Specificity;
+            }
+
+            return sum;
+        }
+    }
+
+    public string Text
+    {
+        get
+        {
+            var parts = new string[2 * _combinators.Count + 1];
+
+            if (_combinators.Count > 0)
+            {
+                var l = 0;
+                var n = _combinators.Count - 1;
+
+                for (var i = 0; i < n; i++)
+                {
+                    parts[l++] = _combinators[i].Selector.Text;
+                    parts[l++] = _combinators[i].Delimiter!;
+                }
+
+                parts[l] = _combinators[n].Selector.Text;
+            }
+
+            return string.Concat(parts);
+        }
+    }
+
+    public int Length => _combinators.Count;
+
+    public bool IsReady
+    {
+        get;
+        private set;
+    }
+
+    #endregion
+
+    #region Methods
+
+    public void Accept(ISelectorVisitor visitor)
+    {
+        var selectors = _combinators.Select(m => m.Selector);
+        var symbols = _combinators.Take(_combinators.Count - 1).Select(m => m.Delimiter!);
+        visitor.Combinator(selectors, symbols);
+    }
+
+    public bool Match(IElement element, IElement scope)
+    {
+        var last = _combinators.Count - 1;
+
+        if (_combinators[last].Selector.Match(element, scope))
+        {
+            return last > 0 ? MatchCascade(last - 1, element, scope) : true;
+        }
+
+        return false;
+    }
+
+    public void ConcludeSelector(ISelector selector)
+    {
+        if (!IsReady)
+        {
+            _combinators.Add(new CombinatorSelector
+            {
+                Selector = selector,
+                Transform = null,
+                Delimiter = null
+            });
+            IsReady = true;
+        }
+    }
+
+    public void AppendSelector(ISelector selector, CssCombinator combinator)
+    {
+        if (!IsReady)
+        {
+            _combinators.Add(new CombinatorSelector
+            {
+                Selector = combinator.Change(selector),
+                Transform = combinator.Transform,
+                Delimiter = combinator.Delimiter
+            });
+        }
+    }
+
+    #endregion
+
+    #region Helpers
+
+    private bool MatchCascade(int pos, IElement element, IElement scope)
+    {
+        var combinatorSelector = _combinators[pos];
+        var newElements = combinatorSelector.Transform!(element);
+
+        foreach (var newElement in newElements)
+        {
+            if (combinatorSelector.Selector.Match(newElement, scope) && (pos == 0 || MatchCascade(pos - 1, newElement, scope)))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    #endregion
+
+    #region Nested Structure
+
+    private struct CombinatorSelector
+    {
+        public string Delimiter;
+        public Func<IElement, IEnumerable<IElement>> Transform;
+        public ISelector Selector;
+    }
+
+    #endregion
+}

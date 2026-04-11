@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>CodeBrix.MarkupParse</AssemblyName>
+    <RootNamespace>CodeBrix.MarkupParse</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- NuGet package properties -->
+    <PackageId>CodeBrix.MarkupParse.MitLicenseForever</PackageId>
+    <Version>1.0.100</Version>
+    <Product>CodeBrix.MarkupParse</Product>
+    <Title>CodeBrix.MarkupParse</Title>
+    <Authors>Jeremy Ellis</Authors>
+    <Description>A fully managed, cross-platform HTML/markup parsing library for .NET. Parses HTML into a navigable DOM tree, supports CSS selector querying, DOM traversal and manipulation, and HTML serialization with multiple formatting options. Zero external dependencies.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ellisnet/CodeBrix.MarkupParse</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ellisnet/CodeBrix.MarkupParse</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIcon>icon-codebrix-128.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2026 Jeremy Ellis and contributors</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>html;markup;parser;dom;css-selectors;html-parser;dom-manipulation;scraping;web;CodeBrix</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon-codebrix-128.png" Pack="true" PackagePath="" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" />
+    <None Include="..\..\AGENT-README.txt" Pack="true" PackagePath="" />
+    <None Include="..\..\THIRD-PARTY-NOTICES.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

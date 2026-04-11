@@ -1,0 +1,27 @@
+namespace CodeBrix.MarkupParse.Html.Parser; //Was previously: namespace AngleSharp.Html.Parser
+/// <summary>
+/// Defines the different tokenization content models.
+/// </summary>
+public enum HtmlParseMode : byte
+{
+    /// <summary>
+    /// Initial state: Parsed Character Data (characters will be parsed).
+    /// </summary>
+    PCData,
+    /// <summary>
+    /// Optional state: Raw character data (characters will be parsed from a special table).
+    /// </summary>
+    RCData,
+    /// <summary>
+    /// Optional state: Just plain text data (characters will be parsed matching the given ones).
+    /// </summary>
+    Plaintext,
+    /// <summary>
+    /// Optional state: Rawtext data (characters will not be parsed).
+    /// </summary>
+    Rawtext,
+    /// <summary>
+    /// Optional state: Script data.
+    /// </summary>
+    Script
+}
