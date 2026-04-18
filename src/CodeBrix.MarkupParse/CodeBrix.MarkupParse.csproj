@@ -8,7 +8,7 @@
 
     <!-- NuGet package properties -->
     <PackageId>CodeBrix.MarkupParse.MitLicenseForever</PackageId>
-    <Version>1.0.100</Version>
+    <Version>1.0.106</Version>
     <Product>CodeBrix.MarkupParse</Product>
     <Title>CodeBrix.MarkupParse</Title>
     <Authors>Jeremy Ellis</Authors>
