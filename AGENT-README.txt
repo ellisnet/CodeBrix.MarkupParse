@@ -1153,86 +1153,86 @@ Path: tests/CodeBrix.MarkupParse.Tests/
 Feature-to-test-file mapping:
 
 Complete usage examples (parsing, querying, DOM manipulation):
-    -> tests/CodeBrix.MarkupParse.Tests/Examples/Wiki.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Examples/WikiTests.cs
 
 README example (loading from URL with BrowsingContext):
-    -> tests/CodeBrix.MarkupParse.Tests/Examples/Readme.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Examples/ReadmeTests.cs
 
 Source position tracking (OnCreated, OnToken, SourceReference):
     -> tests/CodeBrix.MarkupParse.Tests/Examples/Questions.cs
 
 Form submission:
-    -> tests/CodeBrix.MarkupParse.Tests/Examples/Forms.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Examples/FormsTests.cs
 
 CSS selector querying (comprehensive W3C selector tests):
-    -> tests/CodeBrix.MarkupParse.Tests/Css/CssW3CSelector.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Css/CssW3CSelectorTests.cs
 
 CSS selector extensions (QuerySelector, QuerySelectorAll):
-    -> tests/CodeBrix.MarkupParse.Tests/Css/QueryExtensions.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Css/QueryExtensionsTests.cs
 
 DOM manipulation (element creation, insertion, removal):
-    -> tests/CodeBrix.MarkupParse.Tests/Html/DomManipulation.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Html/DOM.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/DomManipulationTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/DOMTests.cs
 
 HTML tokenization and parsing:
-    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlTokenization.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlTree.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlTokenizationTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlTreeTests.cs
 
 HTML formatting (pretty-print, minify, XHTML):
-    -> tests/CodeBrix.MarkupParse.Tests/Library/PrettyMarkupPrinter.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/MinifyFormatter.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/XhtmlFormatter.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/PrettyMarkupPrinterTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/MinifyFormatterTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/XhtmlFormatterTests.cs
     -> tests/CodeBrix.MarkupParse.Tests/Library/MarkupFormatter.cs
 
 Async parsing:
-    -> tests/CodeBrix.MarkupParse.Tests/Library/AsyncParsing.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/AsyncParsingTests.cs
 
 Configuration and BrowsingContext:
-    -> tests/CodeBrix.MarkupParse.Tests/Library/BasicConfiguration.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/BasicConfigurationTests.cs
     -> tests/CodeBrix.MarkupParse.Tests/Library/BrowsingContextTests.cs
 
 Document creation and loading:
-    -> tests/CodeBrix.MarkupParse.Tests/Library/DocumentCreation.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/ContextLoading.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/DocumentCreationTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/ContextLoadingTests.cs
 
 Parser options:
-    -> tests/CodeBrix.MarkupParse.Tests/Library/ParsingOptions.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/ParsingOptionsTests.cs
 
 DOM extensions and common operations:
-    -> tests/CodeBrix.MarkupParse.Tests/Library/DOMExtensions.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/DOMActions.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/CommonExtensions.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/DOMExtensionsTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/DOMActionsTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/CommonExtensionsTests.cs
 
 Format extensions (ToHtml, Text):
     -> tests/CodeBrix.MarkupParse.Tests/Library/FormatExtensions.cs
 
 Node iteration and tree walking:
-    -> tests/CodeBrix.MarkupParse.Tests/Library/NodeIterator.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/TreeWalker.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/NodeIteratorTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/TreeWalkerTests.cs
 
 HTML tables:
-    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlTable.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/DOMTable.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlTableTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/DOMTableTests.cs
 
 HTML forms (field values, submission, reset):
-    -> tests/CodeBrix.MarkupParse.Tests/Library/FormSetFieldValues.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/FormSetFieldValuesTests.cs
     -> tests/CodeBrix.MarkupParse.Tests/Library/FormSubmission.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/FormSubmit.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Library/FormReset.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/FormSubmitTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Library/FormResetTests.cs
 
 SVG and MathML within HTML:
-    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlWithSVG.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlWithMathML.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlWithSVGTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Html/HtmlWithMathMLTests.cs
 
 URL parsing and validation:
-    -> tests/CodeBrix.MarkupParse.Tests/Urls/Url.cs
-    -> tests/CodeBrix.MarkupParse.Tests/Urls/UrlValidation.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Urls/UrlTests.cs
+    -> tests/CodeBrix.MarkupParse.Tests/Urls/UrlValidationTests.cs
 
 HOW TO USE: Fetch the raw file content from GitHub using a URL like:
     https://raw.githubusercontent.com/ellisnet/CodeBrix.MarkupParse/main/{path}
 
 For example:
-    https://raw.githubusercontent.com/ellisnet/CodeBrix.MarkupParse/main/tests/CodeBrix.MarkupParse.Tests/Examples/Wiki.cs
+    https://raw.githubusercontent.com/ellisnet/CodeBrix.MarkupParse/main/tests/CodeBrix.MarkupParse.Tests/Examples/WikiTests.cs
 
 ================================================================================
 

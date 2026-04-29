@@ -84,6 +84,17 @@ quirksmode.org DOM tests.
 Source: http://www.quirksmode.org/dom/tests/
 More information: http://www.quirksmode.org/dom/w3c_core.html
 
+Author: Peter-Paul Koch (ppk), quirksmode.org
+License terms (from http://www.quirksmode.org/about/copyright.html):
+
+    "You may copy, tweak, rewrite, sell or lease any code example on this
+    site, with one single exception."
+
+The single exception identified on that page is the "Usable Forms" script
+(http://www.quirksmode.org/dom/usableforms.html), which is NOT used in this
+project. The DOM test code examples used here fall under the general grant
+above and may be freely copied, modified, and redistributed.
+
 -----
 StackOverflow - Network Connection Check
 -----

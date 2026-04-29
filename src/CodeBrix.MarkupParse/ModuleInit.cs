@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -11,7 +12,15 @@ internal static class ModuleInit
     // available without depending on any particular type being constructed
     // first. Fixes a parallel-test ordering race in CodeBrix.MarkupParse.Tests
     // that was exposed under CPU pressure.
+    //
+    // CA2255 warns against [ModuleInitializer] in libraries because eager
+    // execution at assembly load can surprise consumers. In this case the
+    // behavior is deliberate and required: an HTML parser must be able to
+    // decode legacy code pages, and Encoding.RegisterProvider is idempotent
+    // and side-effect free for callers.
     [ModuleInitializer]
+    [SuppressMessage("Usage", "CA2255:The 'ModuleInitializer' attribute should not be used in libraries",
+        Justification = "Eager, idempotent registration of CodePagesEncodingProvider is required for correct HTML decoding and to avoid a parallel-init race.")]
     internal static void EnsureEncodingProviderRegistered()
     {
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
