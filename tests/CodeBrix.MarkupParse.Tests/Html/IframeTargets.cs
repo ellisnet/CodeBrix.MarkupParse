@@ -371,7 +371,7 @@ public class IframeTargets
         Assert.NotNull(newWindowLink);
         newWindowLink.DoClick();
 
-        await Task.Delay(1000, TestContext.Current.CancellationToken);
+        await Task.Delay(2000, TestContext.Current.CancellationToken);
 
         var newWindowDoc = context.FindChild("new-window")?.Active;
         Assert.NotNull(newWindowDoc);
@@ -380,7 +380,7 @@ public class IframeTargets
         Assert.NotNull(frameLink);
         frameLink.DoClick();
 
-        await Task.Delay(1000, TestContext.Current.CancellationToken);
+        await Task.Delay(2000, TestContext.Current.CancellationToken);
 
         var iframe = newWindowDoc.GetElementById("iframe") as IHtmlInlineFrameElement;
         Assert.NotNull(iframe?.ContentDocument);
